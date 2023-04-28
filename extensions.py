@@ -1,7 +1,7 @@
 '''
 Author: dfz
 Date: 2023-04-26 19:59:52
-LastEditTime: 2023-04-27 22:36:08
+LastEditTime: 2023-04-28 22:14:45
 LastEditors: dfz
 Description: 
 FilePath: /mystudy/extensions.py
@@ -10,10 +10,10 @@ FilePath: /mystudy/extensions.py
 
 import celery
 import sqlalchemy
-from celeryconfig import sqlalchemy_url, sqlalchemy_echo
+from config import SQLALCHEMY_DATABASE_URI, SQLALCHEMY_ECHO
 
 
-_sqlalchemy_engine = sqlalchemy.create_engine(url=sqlalchemy_url, echo=sqlalchemy_echo)
+_sqlalchemy_engine = sqlalchemy.create_engine(url=SQLALCHEMY_DATABASE_URI, echo=SQLALCHEMY_ECHO)
 
 
 

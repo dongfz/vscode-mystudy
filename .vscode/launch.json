@@ -5,7 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Celery",
+            "name": "Python: Beat",
+            "type": "python",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "-A",
+                "main",
+                "beat",
+                "-l",
+                "info",
+                "--schedule",
+                "/tmp/celerybeat-schedule",
+                "--pidfile",
+                "/tmp/celerybeat.pid",
+            ]
+        },
+        {
+            "name": "Python: Worker",
             "type": "python",
             "request": "launch",
             "module": "celery",
