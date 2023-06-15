@@ -23,7 +23,7 @@ imports = ("mystudy.tasks",)
 
 beat_schedule = {
     "test_sched_task": {
-        "task": "mystudy.test_sched_task",
+        "task": "mystudy.tasks.test_sched_task",
         "schedule": crontab(minute="*/1"),
         "args": (1,),
     },

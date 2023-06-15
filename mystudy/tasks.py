@@ -24,4 +24,4 @@ def task1(self):
 def test_sched_task(self, test: int) -> None:
     print(test)
     print(current_app)
-    current_app.send_task("mystudy.task1")
+    current_app.send_task("mystudy.tasks.task1")

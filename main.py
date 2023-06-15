@@ -21,7 +21,7 @@ if __name__ == "__main__":
             "--loglevel=INFO",
             "--hostname=%h",
             "--pool=threads",
-            "--queues=test.q,test.2q",
+            # "--queues=test.q,test.2q",
             "--task-events",
         ]
     )

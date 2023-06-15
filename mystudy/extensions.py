@@ -1,8 +1,8 @@
 '''
 Author: dfz
 Date: 2023-04-26 19:59:52
-LastEditTime: 2023-06-15 20:34:24
-LastEditors: dfz
+LastEditTime: 2023-06-15 23:26:13
+LastEditors: dfz sneakydog@yeah.net
 Description: 
 FilePath: /mystudy/mystudy/extensions.py
 '''
@@ -36,6 +36,6 @@ class BaseCeleryTask(Task):
 
 class CeleryApp(Celery):
     def gen_task_name(self, name, module):
-        if module.endswith(".tasks"):
-            module = module[:-6]
+        # if module.endswith(".tasks"):
+        #     module = module[:-6]
         return super().gen_task_name(name, module)
