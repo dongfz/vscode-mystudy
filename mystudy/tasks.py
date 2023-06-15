@@ -1,11 +1,12 @@
-'''
+
+"""
 Author: dfz
 Date: 2023-04-26 19:59:21
-LastEditTime: 2023-06-15 20:44:16
+LastEditTime: 2023-06-15 22:53:49
 LastEditors: dfz
 Description: 
 FilePath: /mystudy/mystudy/tasks.py
-'''
+"""
 
 from celery import shared_task, current_app
 
@@ -23,4 +24,4 @@ def task1(self):
 def test_sched_task(self, test: int) -> None:
     print(test)
     print(current_app)
-    current_app.send_task('tasks.task1')
+    current_app.send_task("mystudy.task1")
