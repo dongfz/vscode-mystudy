@@ -7,9 +7,8 @@ Description:
 FilePath: /mystudy/test.py
 Software: vscode
 '''
-print(12313) 
 
-from main import celery_app
+from . import celery_app
 
 if __name__ == "__main__":
     celery_app.send_task('tasks.task1')

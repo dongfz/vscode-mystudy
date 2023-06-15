@@ -1,7 +1,7 @@
 '''
 Author: dfz
 Date: 2023-04-27 22:29:40
-LastEditTime: 2023-04-28 22:22:49
+LastEditTime: 2023-05-07 21:38:46
 LastEditors: dfz
 Description: 
 FilePath: /mystudy/main.py
@@ -9,15 +9,7 @@ Software: vscode
 '''
 
 
-from extensions import CeleryApp, BaseCeleryTask
-import config
+from mystudy import celery_app
 
-
-def create_celeryapp() -> CeleryApp:
-    celery_app = CeleryApp(__name__, task_cls=BaseCeleryTask)
-    celery_app.config_from_object(config)
-    celery_app.set_default()
-    return celery_app
-
-
-celery_app = create_celeryapp()
+if __name__ == "__main__":
+    celery_app.worker_main(argv=["worker"])
